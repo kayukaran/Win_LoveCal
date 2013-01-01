@@ -1,0 +1,114 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="LoveCal.Pages.LocationDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/LoveCal;component/Images/back.jpg" />
+        </Grid.Background>
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <Grid x:Name="layout">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--TitlePanel contains the name of the application and page title-->
+                <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                    <TextBlock x:Name="PageTitle" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.WelComePage_Title}" Margin="9,-7,0,0" Style="{Binding Source={StaticResource PageTitleCaption}}"/>
+                </StackPanel>
+
+                <Grid x:Name="MenuPanel" Grid.Row="1" Margin="12,0,12,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Name="Message"  Grid.Row="1" Grid.Column="0" Source="/LoveCal;component/Images/icon2.jpg"/>
+                    <TextBlock Name="percentageCaption" Grid.Row="1" Grid.Column="2" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.LocationMenuTitle}" Style="{Binding Source={StaticResource MenuTitleCaption}}" />
+
+                </Grid>
+
+
+
+                <!--ContentPanel - place additional content here-->
+                <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,0" Loaded="ContentPanel_Loaded">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="400"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                    <TextBlock Name="DisplayLocation" Grid.Row="1" Grid.Column="1" Style="{Binding Source={StaticResource LocationPageCaption}}" Loaded="DisplayLocation_Loaded" />
+                    <TextBlock Name="DisplayLocationMsg" Grid.Row="3" Grid.Column="1" Style="{Binding Source={StaticResource LocationMsgPageCaption}}" Loaded="DisplayLocationMsg_Loaded" />
+                    <Image Name="Colombo" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/colombo.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Bentota" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/bentota.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Adamspeak" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/adamspeak.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Batticaloa" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/batticaloa.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Beruwala" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/beruwala.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Dambulla" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/dambulla.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Hikkaduwa" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/hikkaduwa.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Jaffna" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/jaffna.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Kandy" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/kandy.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Kurunagala" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/Kurunegala.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Nuwaraeliya" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/Nuwaraeliya.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Galle" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/galle.jpg" Width="250" Visibility="Collapsed" />
+                    <Image Name="Default" Grid.Row="5" Grid.Column="1" Source="/LoveCal;component/Images/default.jpg" Width="250" Visibility="Collapsed" />
+                </Grid>
+                <TextBlock Name="displayPageQuotesCaption" Grid.Row="5" Margin="12,0" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.welcomePage_Quotes}" Style="{Binding Source={StaticResource WelcomePageQuotesCaption}}" />
+                <TextBlock Name="copyrights" Grid.Row="7" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.CopyRight}" Style="{Binding Source={StaticResource Copyright}}" Margin="15,0,0,0" />
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

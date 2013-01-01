@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LoveMessage_1_1" xml:space="preserve">
+    <value>A combination of number 1 with number 1 is very beneficial for business but it is often not as good for personal relationships.</value>
+  </data>
+  <data name="LoveMessage_1_2" xml:space="preserve">
+    <value>A relationship with a combination of these numbers is always preferable and good.</value>
+  </data>
+  <data name="LoveMessage_1_3" xml:space="preserve">
+    <value>The problems that arise with a combination of number 1 and number 3 are that people can be egoistic and self-centered.</value>
+  </data>
+  <data name="LoveMessage_1_4" xml:space="preserve">
+    <value>A relationship based on the combination of these two numbers has opposing but complementary qualities.</value>
+  </data>
+  <data name="LoveMessage_1_5" xml:space="preserve">
+    <value>A relationship based on the combination of these two numbers has opposing but complementary qualities.</value>
+  </data>
+  <data name="LoveMessage_1_6" xml:space="preserve">
+    <value>These two people are capable of great prosperity as long as they are together.</value>
+  </data>
+  <data name="LoveMessage_1_7" xml:space="preserve">
+    <value>This match may also result in a life-long friendship.</value>
+  </data>
+  <data name="LoveMessage_1_8" xml:space="preserve">
+    <value>This combination is actually a perfect mix of love and hate.</value>
+  </data>
+  <data name="LoveMessage_1_9" xml:space="preserve">
+    <value>This association makes a great relationship.</value>
+  </data>
+  <data name="LoveMessage_2_1" xml:space="preserve">
+    <value>A relationship with a combination of these numbers is always preferable and good.</value>
+  </data>
+  <data name="LoveMessage_2_2" xml:space="preserve">
+    <value>Both partners are the same in this combination.</value>
+  </data>
+  <data name="LoveMessage_2_3" xml:space="preserve">
+    <value>Usually have a good humor and chemistry in the relationship.</value>
+  </data>
+  <data name="LoveMessage_2_4" xml:space="preserve">
+    <value>This association is good for a relationship and it helps people to live their live peacefully.</value>
+  </data>
+  <data name="LoveMessage_2_5" xml:space="preserve">
+    <value>The chemistry in this relationship has to be very strong so that the opposing natures do not collide with each other.</value>
+  </data>
+  <data name="LoveMessage_2_6" xml:space="preserve">
+    <value>Both these people should be understanding and should watch their decisions and behaviour.</value>
+  </data>
+  <data name="LoveMessage_2_7" xml:space="preserve">
+    <value>This association is believed to be very fruitful.</value>
+  </data>
+  <data name="LoveMessage_2_8" xml:space="preserve">
+    <value>It is believed that this is one of the most compatible love relationships according to numerology.</value>
+  </data>
+  <data name="LoveMessage_2_9" xml:space="preserve">
+    <value>These two numbers act as two bodies with one soul when in a relationship.</value>
+  </data>
+  <data name="LoveMessage_3_1" xml:space="preserve">
+    <value>The problems that arise with a combination of number 1 and number 3 are that people can be egoistic and self-centered.</value>
+  </data>
+  <data name="LoveMessage_3_2" xml:space="preserve">
+    <value>Usually have a good humor and chemistry in the relationship.</value>
+  </data>
+  <data name="LoveMessage_3_3" xml:space="preserve">
+    <value>These numbers should be understanding and should give freedom to one another.</value>
+  </data>
+  <data name="LoveMessage_3_4" xml:space="preserve">
+    <value>Without proper understanding, this relationship will also face problems like any other.</value>
+  </data>
+  <data name="LoveMessage_3_5" xml:space="preserve">
+    <value>The two people will find each other very interesting and will be able to entertain each other forever.</value>
+  </data>
+  <data name="LoveMessage_3_6" xml:space="preserve">
+    <value>The chemistry is usually very strong and durable.</value>
+  </data>
+  <data name="LoveMessage_3_7" xml:space="preserve">
+    <value>The two numbers are exactly opposite and some believe that they are incompatible.</value>
+  </data>
+  <data name="LoveMessage_3_8" xml:space="preserve">
+    <value>This association usually requires an extra effort from both sides in order to live in harmony.</value>
+  </data>
+  <data name="LoveMessage_3_9" xml:space="preserve">
+    <value>Their emotions and passions are well-matched with each other.</value>
+  </data>
+  <data name="LoveMessage_4_1" xml:space="preserve">
+    <value>In a relationship like this differences may arise due to the different personalities.</value>
+  </data>
+  <data name="LoveMessage_4_2" xml:space="preserve">
+    <value>This is an excellent combination.</value>
+  </data>
+  <data name="LoveMessage_4_3" xml:space="preserve">
+    <value>This is because most of the characteristics will be opposite and dissimilar.</value>
+  </data>
+  <data name="LoveMessage_4_4" xml:space="preserve">
+    <value>Both of these people share the same values and goals in life.</value>
+  </data>
+  <data name="LoveMessage_4_5" xml:space="preserve">
+    <value>The characteristics of both people will be very different.</value>
+  </data>
+  <data name="LoveMessage_4_6" xml:space="preserve">
+    <value>This relationship is built on mutual trust and values. It is a solid relationship.</value>
+  </data>
+  <data name="LoveMessage_4_7" xml:space="preserve">
+    <value>Both these people are also very well-coordinated.</value>
+  </data>
+  <data name="LoveMessage_4_8" xml:space="preserve">
+    <value>Both of these have absolutely the same nature.</value>
+  </data>
+  <data name="LoveMessage_4_9" xml:space="preserve">
+    <value>Both the numbers are good in their own ways.</value>
+  </data>
+  <data name="LoveMessage_5_1" xml:space="preserve">
+    <value>This relationship can be vibrant and lively sometimes.</value>
+  </data>
+  <data name="LoveMessage_5_2" xml:space="preserve">
+    <value>This can be a great relationship with proper understanding.</value>
+  </data>
+  <data name="LoveMessage_5_3" xml:space="preserve">
+    <value>This association is considered to be one of the best combinations which never faces a boring time in life.</value>
+  </data>
+  <data name="LoveMessage_5_4" xml:space="preserve">
+    <value>The characteristics of both people will be very different.</value>
+  </data>
+  <data name="LoveMessage_5_5" xml:space="preserve">
+    <value>Both these people should understand each other and try to maintain some distance in order to have a happy married life.</value>
+  </data>
+  <data name="LoveMessage_5_6" xml:space="preserve">
+    <value>Both the people in this association need to make compromises for success in this relationship.</value>
+  </data>
+  <data name="LoveMessage_5_7" xml:space="preserve">
+    <value>The best possible relationship will be as friends.</value>
+  </data>
+  <data name="LoveMessage_5_8" xml:space="preserve">
+    <value>This combination brings out the best in each other.</value>
+  </data>
+  <data name="LoveMessage_5_9" xml:space="preserve">
+    <value>This is a relationship between two who may find it hard to work the relationship into their busy schedules.</value>
+  </data>
+  <data name="LoveMessage_6_1" xml:space="preserve">
+    <value>These two people are capable of great prosperity as long as they are together.</value>
+  </data>
+  <data name="LoveMessage_6_2" xml:space="preserve">
+    <value>Both these people should be understanding and should watch their decisions and behaviour.</value>
+  </data>
+  <data name="LoveMessage_6_3" xml:space="preserve">
+    <value>The chemistry is usually very strong and durable.</value>
+  </data>
+  <data name="LoveMessage_6_4" xml:space="preserve">
+    <value>This relationship is built on mutual trust and values.</value>
+  </data>
+  <data name="LoveMessage_6_5" xml:space="preserve">
+    <value>Both the people in this association need to make compromises for success in this relationship.</value>
+  </data>
+  <data name="LoveMessage_6_6" xml:space="preserve">
+    <value>Both the people will be completely balanced.</value>
+  </data>
+  <data name="LoveMessage_6_7" xml:space="preserve">
+    <value>Some believe that this relationship may require too much compromises on both the parts.</value>
+  </data>
+  <data name="LoveMessage_6_8" xml:space="preserve">
+    <value>This combination is usually recommended for marriage and romance.</value>
+  </data>
+  <data name="LoveMessage_6_9" xml:space="preserve">
+    <value>People in this association will enjoy a happy and peaceful time together.</value>
+  </data>
+  <data name="LoveMessage_7_1" xml:space="preserve">
+    <value>This match may also result in a life-long friendship.</value>
+  </data>
+  <data name="LoveMessage_7_2" xml:space="preserve">
+    <value>The characteristics of both these numbers are almost same.</value>
+  </data>
+  <data name="LoveMessage_7_3" xml:space="preserve">
+    <value>The two numbers are exactly opposite and some believe that they are incompatible.</value>
+  </data>
+  <data name="LoveMessage_7_4" xml:space="preserve">
+    <value>Some believe that such an association may not be successful due to the lack of energy.</value>
+  </data>
+  <data name="LoveMessage_7_5" xml:space="preserve">
+    <value>The best possible relationship will be as friends.</value>
+  </data>
+  <data name="LoveMessage_7_6" xml:space="preserve">
+    <value>Some believe that this relationship may require too much compromises on both the parts.</value>
+  </data>
+  <data name="LoveMessage_7_7" xml:space="preserve">
+    <value>Therefore, this is a very compatible pairing.</value>
+  </data>
+  <data name="LoveMessage_7_8" xml:space="preserve">
+    <value>This relationship often lacks emotion.</value>
+  </data>
+  <data name="LoveMessage_7_9" xml:space="preserve">
+    <value>This relationship is considered to be very successful.</value>
+  </data>
+  <data name="LoveMessage_8_1" xml:space="preserve">
+    <value>Both these numbers are materialistic numbers who look forward to acquiring wealth.</value>
+  </data>
+  <data name="LoveMessage_8_2" xml:space="preserve">
+    <value>It is believed that this is one of the most compatible love relationships according to numerology.</value>
+  </data>
+  <data name="LoveMessage_8_3" xml:space="preserve">
+    <value>This association usually requires an extra effort from both sides in order to live in harmony.</value>
+  </data>
+  <data name="LoveMessage_8_4" xml:space="preserve">
+    <value>Both of these have absolutely the same nature.</value>
+  </data>
+  <data name="LoveMessage_8_5" xml:space="preserve">
+    <value>This combination brings out the best in each other.</value>
+  </data>
+  <data name="LoveMessage_8_6" xml:space="preserve">
+    <value>This combination is usually recommended for marriage and romance.</value>
+  </data>
+  <data name="LoveMessage_8_7" xml:space="preserve">
+    <value>This association can turn into a very successful.</value>
+  </data>
+  <data name="LoveMessage_8_8" xml:space="preserve">
+    <value>Therefore, both these people will have a drive to be very successful.</value>
+  </data>
+  <data name="LoveMessage_8_9" xml:space="preserve">
+    <value>This association is considered to be very good for romance.</value>
+  </data>
+  <data name="LoveMessage_9_1" xml:space="preserve">
+    <value>There is a great understanding between the people .</value>
+  </data>
+  <data name="LoveMessage_9_2" xml:space="preserve">
+    <value>These two numbers act as two bodies with one soul when in a relationship.</value>
+  </data>
+  <data name="LoveMessage_9_3" xml:space="preserve">
+    <value>Their emotions and passions are well-matched with each other.</value>
+  </data>
+  <data name="LoveMessage_9_4" xml:space="preserve">
+    <value>These people are focused on the basics of building a secure and solid immediate world.</value>
+  </data>
+  <data name="LoveMessage_9_5" xml:space="preserve">
+    <value>These two numbers can make good business partners as well as friends.</value>
+  </data>
+  <data name="LoveMessage_9_6" xml:space="preserve">
+    <value>These two people forge some form of a relationship that goes on for a lifetime.</value>
+  </data>
+  <data name="LoveMessage_9_7" xml:space="preserve">
+    <value>They are listed neutral because the relationship can go either way depending largely on spiritual beliefs.</value>
+  </data>
+  <data name="LoveMessage_9_8" xml:space="preserve">
+    <value>This association is considered to be very good for romance.</value>
+  </data>
+  <data name="LoveMessage_9_9" xml:space="preserve">
+    <value>These two become passionate lovers or very good friends with each other.</value>
+  </data>
+</root>

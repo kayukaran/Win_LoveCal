@@ -1,0 +1,112 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="LoveCal.Pages.PercentageDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/LoveCal;component/Images/back.jpg" />
+        </Grid.Background>
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <Grid x:Name="layout">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--TitlePanel contains the name of the application and page title-->
+                <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+                    <TextBlock x:Name="PageTitle" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.WelComePage_Title}" Margin="9,-7,0,0" Style="{Binding Source={StaticResource PageTitleCaption}}"/>
+                </StackPanel>
+
+                <Grid x:Name="MenuPanel" Grid.Row="1" Margin="12,0,12,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Width="60" Name="Message"  Grid.Row="1" Grid.Column="0" Source="/LoveCal;component/Images/icon.jpg"/>
+                    <TextBlock Name="percentageCaption" Grid.Row="1" Grid.Column="2" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.PercentageMenuTitle}" Style="{Binding Source={StaticResource MenuTitleCaption}}" />
+
+
+                </Grid>
+
+
+
+                <!--ContentPanel - place additional content here-->
+                <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,0" Loaded="ContentPanel_Loaded">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Name="Display" Grid.Row="1" Grid.Column="1" FontWeight="Bold"  Loaded="Display_Loaded" Style="{Binding Source={StaticResource PercentagePageCaption}}" />
+                    <Image Name="Percentage_30_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/30.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_35_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/35.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_40_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/40.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_45_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/45.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_50_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/50.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_55_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/55.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_60_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/60.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_65_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/65.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_70_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/70.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_75_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/75.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_80_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/80.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_85_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/85.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_90_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/90.jpg"   Visibility="Collapsed"/>
+                    <Image Name="Percentage_95_Image" Grid.Row="3" Grid.Column="1" Source="/LoveCal;component/Images/Per/95.jpg"   Visibility="Collapsed"/>
+
+                </Grid>
+                <TextBlock Name="displayPageQuotesCaption" Grid.Row="5" Margin="12,0" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.welcomePage_Quotes}" Style="{Binding Source={StaticResource WelcomePageQuotesCaption}}" />
+                <TextBlock Name="copyrights" Grid.Row="7" Style="{Binding Source={StaticResource Copyright}}" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.CopyRight}" Margin="15,0,0,0" />
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>

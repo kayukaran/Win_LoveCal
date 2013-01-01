@@ -1,0 +1,118 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="LoveCal.Pages.Welcome"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+   >
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/LoveCal;component/Images/back.jpg" />
+        </Grid.Background>
+
+        <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+            <Grid x:Name="layout">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+
+                <!--TitlePanel contains the name of the application and page title-->
+                <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+
+                    <TextBlock x:Name="PageTitle" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.WelComePage_Title}" Margin="9,-7,0,0" Style="{Binding Source={StaticResource PageTitleCaption}}"/>
+                </StackPanel>
+
+                <!--ContentPanel - place additional content here-->
+                <Border Name="Contentborder" Grid.Row="1" Background="Transparent" BorderBrush="IndianRed" BorderThickness="5" Opacity="60" Margin="12,0,12,0">
+                    <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,12,12,0" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="100"/>
+                            <RowDefinition Height="75"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="75"/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.WelComePage_Caption}" Style="{Binding Source={StaticResource WelcomePageCaption}}" />
+                        <Grid Margin="15,15,40,15" Grid.Row="2" Grid.ColumnSpan="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Width="60" HorizontalAlignment="Left" Source="/LoveCal;component/Images/boys.jpg" />
+                            <TextBlock Name="GenderMale" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.Gender_boy}" Margin="80,10,0,0" Style="{Binding Source={StaticResource WelcomePageGenderCaption}}" />
+                            <Rectangle Name="englishText" Fill="Transparent" Tap="Rectangle_Tap1" MinWidth="400" MinHeight="60"  />
+                        </Grid>
+                        <Grid Margin="15,15,40,15" Grid.Row="3" Grid.ColumnSpan="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Width="60" HorizontalAlignment="Left" Source="/LoveCal;component/Images/girls.jpg" />
+                            <TextBlock Name="GenderFeMale" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.Gender_Girl}" Margin="80,10,0,0" Style="{Binding Source={StaticResource WelcomePageGenderCaption}}" />
+                            <Rectangle Name="GenderFeMaleText" Fill="Transparent" MinWidth="400" MinHeight="60" Tap="Rectangle_Tap2" />
+                        </Grid>
+                        <Border Name="formatDialog" Background="BurlyWood"  Grid.Row="2" Grid.ColumnSpan="3"   Grid.RowSpan="2" BorderBrush="Chocolate" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="10"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="150"/>
+                                    <ColumnDefinition Width="10"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="" Name="dialogOutPut" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{Binding Source={StaticResource DialogBoxDialog}}" />
+                                <Button Content="Ok" Grid.Row="2" Grid.Column="2" Click="Button_Click" Style="{Binding Source={StaticResource dialogBoxButtonStyle}}" />
+                                <Button Content="Cancel" Grid.Row="2" Grid.Column="1" Click="Cancel_Click" Style="{Binding Source={StaticResource dialogBoxButtonStyle}}" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </Border>
+                <Grid Grid.Row="2" Grid.Column="1" Name="Quotes">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Name="WelcomepageQuotes" Grid.Row="1" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.welcomePage_Quotes}" Style="{Binding Source={StaticResource WelcomePageQuotesCaption}}" Margin="10,0,0,0" />
+                </Grid>
+                <TextBlock Name="copyrights" Grid.Row="4" Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.CopyRight}" Style="{Binding Source={StaticResource Copyright}}" Margin="15,0,0,0" />
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+
+
+</phone:PhoneApplicationPage>
